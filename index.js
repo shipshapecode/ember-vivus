@@ -28,14 +28,9 @@ module.exports = {
     var vendor = this.treePaths.vendor;
 
     if (!process.env.EMBER_CLI_FASTBOOT) {
-      if (app.env === "production") {
-        app.import(app.bowerDirectory + '/vivus/dist/vivus.min.js', {prepend: true});
-      } else {
-        app.import(app.bowerDirectory + '/vivus/dist/vivus.js', {prepend: true});
-      }
+      app.import(app.bowerDirectory + '/vivus/dist/vivus.min.js', {prepend: true});
     }
 
     app.import(vendor + '/shims/vivus.js');
   }
-
 };
