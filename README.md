@@ -1,26 +1,15 @@
-# Ember-vivus
+# Ember-Vivus
 
-This README outlines the details of collaborating on this Ember addon.
+Installs `Vivus` and exposes it to your project. It will import the minified version for production builds only, and won't import anything if your app is running in FastBoot.
+
+This methods used to import everything are based almost entirely on [ember-tweenlite](https://github.com/runspired/ember-tweenlite)
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-vivus`
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+`import Vivus from 'vivus';`
 
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+To use, you just need to import Vivus in whatever file you'd like to use it in.

@@ -1,7 +1,7 @@
 {
   "name": "ember-vivus",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Enables using Vivus to animate SVGs",
   "directories": {
     "doc": "doc",
     "test": "tests"
