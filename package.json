@@ -1,6 +1,6 @@
 {
   "name": "ember-vivus",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Enables using Vivus to animate SVGs",
   "directories": {
     "doc": "doc",
