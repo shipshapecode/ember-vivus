@@ -1,6 +1,6 @@
 # Ember-Vivus
 
-<a href="http://shipshape.io/"><img src="http://i.imgur.com/EVjM7AV.png" width="100" height="100"/></a>
+<a href="https://shipshape.io/"><img src="http://i.imgur.com/bU4ABmk.png" width="100" height="100"/></a>
 
 Installs `Vivus` and exposes it to your project. It will import the minified version for production builds only, and won't import anything if your app is running in FastBoot.
 
