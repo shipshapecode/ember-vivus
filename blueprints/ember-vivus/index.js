@@ -5,6 +5,6 @@ module.exports = {
   normalizeEntityName: function() {},
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('vivus', '0.3.0');
+    return this.addBowerPackageToProject('vivus', '0.4.0');
   }
 };
