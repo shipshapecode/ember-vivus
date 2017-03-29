@@ -1,6 +1,6 @@
 {
   "name": "ember-vivus",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Enables using Vivus in Ember to animate SVGs",
   "keywords": [
     "ember-addon",
