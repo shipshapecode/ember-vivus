@@ -1,41 +1,24 @@
-/*jshint node:true*/
-/* global require, module */
+/* eslint-env node */
 'use strict';
-
-var Funnel = require('broccoli-funnel');
-var mergeTrees = require('broccoli-merge-trees');
-
 
 module.exports = {
   name: 'ember-vivus',
 
-  included: function(app) {
-    this._super.included.apply(this, arguments);
-
-    // see: https://github.com/ember-cli/ember-cli/issues/3718
-    if (typeof app.import !== 'function' && app.app) {
-      app = app.app;
-    }
-
-    this.importDependencies(app);
-  },
-
-  importDependencies: function(app) {
-    if (arguments.length < 1) {
-      throw new Error('Application instance must be passed to import');
-    }
-
-    var vendor = this.treePaths.vendor;
-
-    if (!process.env.EMBER_CLI_FASTBOOT) {
-      if (app.env === "production") {
-        app.import(app.bowerDirectory + '/vivus/dist/vivus.min.js', {prepend: true});
-      } else {
-        app.import(app.bowerDirectory + '/vivus/dist/vivus.js', {prepend: true});
+  options: {
+    nodeAssets: {
+      vivus: {
+        vendor: ['dist/vivus.js']
       }
     }
+  },
 
-    app.import(vendor + '/shims/vivus.js');
+  included: function() {
+    this._super.included.apply(this, arguments);
+
+    if (!process.env.EMBER_CLI_FASTBOOT) {
+      this.import('vendor/vivus/dist/vivus.js', {
+        using: [{ transformation: 'amd', as: 'vivus' }]
+      });
+    }
   }
-
 };
