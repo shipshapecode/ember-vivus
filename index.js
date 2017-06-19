@@ -1,13 +1,20 @@
 /* eslint-env node */
 'use strict';
 
+const fastbootTransform = require('fastboot-transform');
+
 module.exports = {
   name: 'ember-vivus',
 
   options: {
     nodeAssets: {
       vivus: {
-        vendor: ['dist/vivus.js']
+        vendor: {
+          include: ['dist/vivus.js'],
+          processTree(input) {
+            return fastbootTransform(input);
+          }
+        }
       }
     }
   },
@@ -15,10 +22,8 @@ module.exports = {
   included: function() {
     this._super.included.apply(this, arguments);
 
-    if (!process.env.EMBER_CLI_FASTBOOT) {
-      this.import('vendor/vivus/dist/vivus.js', {
-        using: [{ transformation: 'amd', as: 'vivus' }]
-      });
-    }
+    this.import('vendor/vivus/dist/vivus.js', {
+      using: [{ transformation: 'amd', as: 'vivus' }]
+    });
   }
 };
