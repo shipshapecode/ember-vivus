@@ -10,7 +10,9 @@ module.exports = {
     nodeAssets: {
       vivus: {
         vendor: {
-          include: ['dist/vivus.js'],
+          srcDir: 'dist',
+          destDir: 'vivus',
+          include: ['vivus.js'],
           processTree(input) {
             return fastbootTransform(input);
           }
@@ -22,8 +24,13 @@ module.exports = {
   included: function() {
     this._super.included.apply(this, arguments);
 
-    this.import('vendor/vivus/dist/vivus.js', {
-      using: [{ transformation: 'amd', as: 'vivus' }]
+    this.import('vendor/vivus/vivus.js');
+
+    this.import('vendor/vivus/shim.js', {
+      type: 'vendor',
+      exports: {
+        vivus: ['default']
+      }
     });
   }
 };
