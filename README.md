@@ -2,6 +2,8 @@
 
 <a href="https://shipshape.io/"><img src="http://i.imgur.com/bU4ABmk.png" width="100" height="100"/></a>
 
+**[ember-vivus is built and maintained by Ship Shape. Contact us for Ember.js consulting, development, and training for your project](https://shipshape.io/ember-consulting)**.
+
 [![npm version](https://badge.fury.io/js/ember-vivus.svg)](http://badge.fury.io/js/ember-vivus)
 ![Download count all time](https://img.shields.io/npm/dt/ember-vivus.svg)
 [![npm](https://img.shields.io/npm/dm/ember-vivus.svg)]()
