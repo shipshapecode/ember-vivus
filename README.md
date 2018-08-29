@@ -8,7 +8,7 @@
 ![Download count all time](https://img.shields.io/npm/dt/ember-vivus.svg)
 [![npm](https://img.shields.io/npm/dm/ember-vivus.svg)]()
 [![Ember Observer Score](http://emberobserver.com/badges/ember-vivus.svg)](http://emberobserver.com/addons/ember-vivus)
-[![Build Status](https://travis-ci.org/shipshapecode/ember-vivus.svg)](https://travis-ci.org/shipshapecode/ember-vivus)
+[![Build Status](https://travis-ci.org/shipshapecode/ember-vivus.svg)](https://travis-ci.org/shipshapecode/ember-vivus) [![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/ember-vivus.svg)](https://greenkeeper.io/)
 
 Installs `Vivus` and exposes it to your project. It will import the minified version for production builds only, and won't import anything if your app is running in FastBoot.
 
