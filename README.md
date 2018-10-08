@@ -12,6 +12,10 @@
 
 Installs `Vivus` and exposes it to your project. It will import the minified version for production builds only, and won't import anything if your app is running in FastBoot.
 
+## Deprecated
+
+This addon has been deprecated, since it was just a shim. You should use [ember-auto-import](https://github.com/ef4/ember-auto-import) instead.
+
 ## Installation
 
 `ember install ember-vivus`
